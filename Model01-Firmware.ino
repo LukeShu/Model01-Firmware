@@ -54,9 +54,10 @@
   * a macro key is pressed.
   */
 
-enum { MACRO_VERSION_INFO,
-       MACRO_ANY
-     };
+enum {
+	M_INFO,
+	M_ANY
+};
 
 
 
@@ -119,7 +120,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    Key_LeftControl, Key_Backspace, Key_LeftGui, Key_LeftShift,
    ShiftToLayer(FUNCTION),
 
-   M(MACRO_ANY),  Key_6, Key_7, Key_8,     Key_9,         Key_0,         LockLayer(NUMPAD),
+   M(M_ANY),      Key_6, Key_7, Key_8,     Key_9,         Key_0,         LockLayer(NUMPAD),
    Key_Enter,     Key_Y, Key_U, Key_I,     Key_O,         Key_P,         Key_Equals,
                   Key_H, Key_J, Key_K,     Key_L,         Key_Semicolon, Key_Quote,
    Key_RightAlt,  Key_N, Key_M, Key_Comma, Key_Period,    Key_Slash,     Key_Minus,
@@ -135,7 +136,7 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___, ___, ___, ___,
    ___,
 
-   M(MACRO_VERSION_INFO),  ___, Key_Keypad7, Key_Keypad8,   Key_Keypad9,        Key_KeypadSubtract, ___,
+   M(M_INFO),              ___, Key_Keypad7, Key_Keypad8,   Key_Keypad9,        Key_KeypadSubtract, ___,
    ___,                    ___, Key_Keypad4, Key_Keypad5,   Key_Keypad6,        Key_KeypadAdd,      ___,
                            ___, Key_Keypad1, Key_Keypad2,   Key_Keypad3,        Key_Equals,         Key_Quote,
    ___,                    ___, Key_Keypad0, Key_KeypadDot, Key_KeypadMultiply, Key_KeypadDivide,   Key_Enter,
@@ -207,11 +208,11 @@ static void anyKeyMacro(uint8_t keyState) {
 const macro_t *macroAction(uint8_t macroIndex, uint8_t keyState) {
   switch (macroIndex) {
 
-  case MACRO_VERSION_INFO:
+  case M_INFO:
     versionInfoMacro(keyState);
     break;
 
-  case MACRO_ANY:
+  case M_ANY:
     anyKeyMacro(keyState);
     break;
   }
