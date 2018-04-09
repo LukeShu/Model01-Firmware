@@ -178,10 +178,10 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___, Key_Delete, ___, ___,
    ___,
 
-   Consumer_ScanPreviousTrack, Key_F6       , Key_F7       , Key_F8                  , Key_F9                  , Key_F10         , Key_F11 ,
-   Consumer_ScanNextTrack    , Key_LBrace   , Key_RBrace   , Key_LBracket            , Key_RBracket            , Key_UpArrow     , Key_F12 ,
-   /* skip */                  Key_LeftArrow, Key_DownArrow, Key_UpArrow             , Key_RightArrow          , ___             , ___     ,
-   ___                       , Key_DownArrow, Consumer_Mute, Consumer_VolumeDecrement, Consumer_VolumeIncrement, Key_Backslash   , Key_Pipe,
+   Consumer_ScanPreviousTrack, Key_F6                , Key_F7       , Key_F8                  , Key_F9                  , Key_F10         , Key_F11 ,
+   Consumer_ScanNextTrack    , Consumer_ScanNextTrack, Key_LBrace   , Key_RBrace              , ___                     , Key_UpArrow     , Key_F12 ,
+   /* skip */                  Key_LeftArrow         , Key_LBracket , Key_RBracket            , Key_RightArrow          , ___             , ___     ,
+   ___                       , Key_DownArrow         , Consumer_Mute, Consumer_VolumeDecrement, Consumer_VolumeIncrement, Key_Backslash   , Key_Pipe,
    ___, ___, Consumer_PlaySlashPause, ___,
    ___)
 
