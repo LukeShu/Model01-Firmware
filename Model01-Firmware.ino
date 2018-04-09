@@ -110,6 +110,33 @@ enum { QWERTY, NUMPAD, FUNCTION }; // layers
  */
 // *INDENT-OFF*
 
+#define Key_Dot    Key_Period
+#define Key_Semi   Key_Semicolon
+#define Key_LSuper Key_LGui
+#define Key_RSuper Key_RGui
+#define Key_LBrace Key_LeftCurlyBracket
+#define Key_RBrace Key_RightCurlyBracket
+
+
+#define Key_KP_Lock  Key_KeypadNumLock
+#define Key_KP_Div   Key_KeypadDivide
+#define Key_KP_Mul   Key_KeypadMultiply
+#define Key_KP_Sub   Key_KeypadSubtract
+#define Key_KP_Add   Key_KeypadAdd
+#define Key_KP_Enter Key_KeypadEnter
+#define Key_KP_1     Key_Keypad1
+#define Key_KP_2     Key_Keypad2
+#define Key_KP_3     Key_Keypad3
+#define Key_KP_4     Key_Keypad4
+#define Key_KP_5     Key_Keypad5
+#define Key_KP_6     Key_Keypad6
+#define Key_KP_7     Key_Keypad7
+#define Key_KP_8     Key_Keypad8
+#define Key_KP_9     Key_Keypad9
+#define Key_KP_0     Key_Keypad0
+#define Key_KP_Dot   Key_KeypadDot
+#define Key_KP_Eq    Key_KeypadEquals
+
 const Key keymaps[][ROWS][COLS] PROGMEM = {
 
   [QWERTY] = KEYMAP_STACKED
