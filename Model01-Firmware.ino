@@ -163,10 +163,10 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___, ___, ___, ___,
    ___,
 
-   M(M_INFO), ___, Key_KP_7, Key_KP_8  , Key_KP_9  , Key_KP_Sub, ___      ,
-   ___      , ___, Key_KP_4, Key_KP_5  , Key_KP_6  , Key_KP_Add, ___      ,
-   /* skip */ ___, Key_KP_1, Key_KP_2  , Key_KP_3  , Key_Equals, Key_Quote,
-   ___      , ___, Key_KP_0, Key_KP_Dot, Key_KP_Mul, Key_KP_Div, Key_Enter,
+   M(M_INFO), ___, Key_KP_7, Key_KP_8  , Key_KP_9  , Key_KP_Sub, ___         ,
+   ___      , ___, Key_KP_4, Key_KP_5  , Key_KP_6  , Key_KP_Add, ___         ,
+   /* skip */ ___, Key_KP_1, Key_KP_2  , Key_KP_3  , Key_KP_Eq , Key_Quote   ,
+   ___      , ___, Key_KP_0, Key_KP_Dot, Key_KP_Mul, Key_KP_Div, Key_KP_Enter,
    ___, ___, ___, ___,
    ___),
 
