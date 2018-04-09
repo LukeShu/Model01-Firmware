@@ -140,17 +140,17 @@ enum { QWERTY, NUMPAD, FUNCTION }; // layers
 const Key keymaps[][ROWS][COLS] PROGMEM = {
 
   [QWERTY] = KEYMAP_STACKED
-  (___,          Key_1, Key_2, Key_3, Key_4, Key_5, Key_LEDEffectNext,
-   Key_Backtick, Key_Q, Key_W, Key_E, Key_R, Key_T, Key_Tab,
-   Key_PageUp,   Key_A, Key_S, Key_D, Key_F, Key_G, /* skip */
-   Key_PageDown, Key_Z, Key_X, Key_C, Key_V, Key_B, Key_Esc,
+  (___         , Key_1, Key_2, Key_3, Key_4, Key_5, Key_LEDEffectNext,
+   Key_Backtick, Key_Q, Key_W, Key_E, Key_R, Key_T, Key_Tab          ,
+   Key_PageUp  , Key_A, Key_S, Key_D, Key_F, Key_G, /* skip */
+   Key_PageDown, Key_Z, Key_X, Key_C, Key_V, Key_B, Key_Esc          ,
    Key_LCtrl, Key_Backspace, Key_LGui, Key_LShift,
    ShiftToLayer(FUNCTION),
 
-   M(M_ANY),      Key_6, Key_7, Key_8,     Key_9,         Key_0,         LockLayer(NUMPAD),
-   Key_Enter,     Key_Y, Key_U, Key_I,     Key_O,         Key_P,         Key_Equals,
-   /* skip */     Key_H, Key_J, Key_K,     Key_L,         Key_Semi,      Key_Quote,
-   Key_RAlt,      Key_N, Key_M, Key_Comma, Key_Dot,       Key_Slash,     Key_Minus,
+   M(M_ANY) , Key_6, Key_7, Key_8    , Key_9  , Key_0    , LockLayer(NUMPAD),
+   Key_Enter, Key_Y, Key_U, Key_I    , Key_O  , Key_P    , Key_Equals       ,
+   /* skip */ Key_H, Key_J, Key_K    , Key_L  , Key_Semi , Key_Quote        ,
+   Key_RAlt , Key_N, Key_M, Key_Comma, Key_Dot, Key_Slash, Key_Minus        ,
    Key_RShift, Key_LAlt, Key_Space, Key_RCtrl,
    ShiftToLayer(FUNCTION)),
 
@@ -163,25 +163,25 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
    ___, ___, ___, ___,
    ___,
 
-   M(M_INFO),              ___, Key_KP_7, Key_KP_8,   Key_KP_9,        Key_KP_Sub,      ___,
-   ___,                    ___, Key_KP_4, Key_KP_5,   Key_KP_6,        Key_KP_Add,      ___,
-   /* skip */              ___, Key_KP_1, Key_KP_2,   Key_KP_3,        Key_Equals,      Key_Quote,
-   ___,                    ___, Key_KP_0, Key_KP_Dot, Key_KP_Mul,      Key_KP_Div,      Key_Enter,
+   M(M_INFO), ___, Key_KP_7, Key_KP_8  , Key_KP_9  , Key_KP_Sub, ___      ,
+   ___      , ___, Key_KP_4, Key_KP_5  , Key_KP_6  , Key_KP_Add, ___      ,
+   /* skip */ ___, Key_KP_1, Key_KP_2  , Key_KP_3  , Key_Equals, Key_Quote,
+   ___      , ___, Key_KP_0, Key_KP_Dot, Key_KP_Mul, Key_KP_Div, Key_Enter,
    ___, ___, ___, ___,
    ___),
 
   [FUNCTION] =  KEYMAP_STACKED
-  (___,      Key_F1,           Key_F2,      Key_F3,     Key_F4,        Key_F5,           XXX,
-   Key_Tab,  ___,              ___,         ___,        ___,           ___,              ___,
-   Key_Home, ___,              ___,         ___,        ___,           ___,              /* skip */
-   Key_End,  Key_PrintScreen,  Key_Insert,  ___,        ___,           ___,              ___,
+  (___     , Key_F1          , Key_F2,     Key_F3, Key_F4, Key_F5, XXX       ,
+   Key_Tab , ___             , ___,        ___   , ___   , ___   , ___       ,
+   Key_Home, ___             , ___,        ___   , ___   , ___   , /* skip */
+   Key_End ,  Key_PrintScreen, Key_Insert, ___   , ___   , ___   , ___       ,
    ___, Key_Delete, ___, ___,
    ___,
 
-   Consumer_ScanPreviousTrack, Key_F6,                 Key_F7,                   Key_F8,                   Key_F9,          Key_F10,          Key_F11,
-   Consumer_PlaySlashPause,    Consumer_ScanNextTrack, Key_LBrace,               Key_RBrace,               Key_LBracket,    Key_RBracket,     Key_F12,
-   /* skip */                  Key_LeftArrow,          Key_DownArrow,            Key_UpArrow,              Key_RightArrow,  ___,              ___,
-   Key_PcApplication,          Consumer_Mute,          Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___,             Key_Backslash,    Key_Pipe,
+   Consumer_ScanPreviousTrack, Key_F6                , Key_F7                  , Key_F8                  , Key_F9        , Key_F10,       Key_F11 ,
+   Consumer_PlaySlashPause   , Consumer_ScanNextTrack, Key_LBrace              , Key_RBrace              , Key_LBracket  , Key_RBracket,  Key_F12 ,
+   /* skip */                  Key_LeftArrow         , Key_DownArrow           , Key_UpArrow             , Key_RightArrow, ___,           ___     ,
+   Key_PcApplication         , Consumer_Mute         , Consumer_VolumeDecrement, Consumer_VolumeIncrement, ___           , Key_Backslash, Key_Pipe,
    ___, ___, Key_Enter, ___,
    ___)
 
