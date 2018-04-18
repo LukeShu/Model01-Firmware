@@ -110,6 +110,7 @@ enum { QWERTY, NUMPAD, FUNCTION }; // layers
  */
 // *INDENT-OFF*
 
+#define Key_Del    Key_Delete
 #define Key_Dot    Key_Period
 #define Key_Semi   Key_Semicolon
 #define Key_LSuper Key_LGui
@@ -173,9 +174,9 @@ const Key keymaps[][ROWS][COLS] PROGMEM = {
   [FUNCTION] =  KEYMAP_STACKED
   (M(M_INFO), Key_F1         , Key_F2    , Key_F3 , Key_F4        , Key_F5       , XXX       ,
    Key_Tab  , ___            , ___       , Key_End, ___           , ___          , ___       ,
-   Key_Home , Key_Home       , ___       , ___    , Key_RightArrow, ___          , /* skip */
+   Key_Home , Key_Home       , ___       , Key_Del, Key_RightArrow, ___          , /* skip */
    Key_End  , Key_PrintScreen, Key_Insert, ___    , ___           , Key_LeftArrow, ___       ,
-   ___, Key_Delete, ___, ___,
+   ___, Key_Del, ___, ___,
    ___,
 
    Consumer_ScanPreviousTrack, Key_F6                , Key_F7       , Key_F8                  , Key_F9                  , Key_F10         , Key_F11 ,
